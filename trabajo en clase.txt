@@ -1,0 +1,14 @@
+head2 =Nodo(20)
+head2.next=Nodo(15)
+print(head2.data)
+print(head2.next.data)
+
+print(head2.data)
+print(head2.next)
+
+print("hacer lo mismo con el segundo metodo")
+
+punto_entrada =Nodo(20, Nodo(15))
+
+print(punto_entrada.data)
+print(punto_entrada.next.data)
