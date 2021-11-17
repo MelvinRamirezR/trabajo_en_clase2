@@ -1,0 +1,37 @@
+class QueueADT:
+     def __init__( self ):
+        self.__data=[]
+
+     def is_empty( self ):
+        return (self.__data) ==0
+
+     def length( self ):
+         return len(self.__data)
+
+     def enqueue( self , elem ):
+         self.__data.append( elem )
+
+     def dequeue( self ):
+         if  not self.is_empty():
+              return self.__data.pop(0)
+
+     def to_string( self ):
+         for elem in self.__data:
+             print(f"| {elem} | <--", end= "")
+
+
+
+
+cola = QueueADT()
+print("Esta vacio?" , cola.is_empty() )
+print("# de elementos ", cola.length())
+cola.enqueue(10)
+cola.to_string()
+print("-.-.-.-.-.-.-.-.")
+cola.enqueue(20)
+cola.enqueue(30)
+cola.enqueue(40)
+cola.to_string()
+siguiente = cola.dequeue()
+print("\n atendiendo a: ", siguiente)
+cola.to_string()
